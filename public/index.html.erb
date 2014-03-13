@@ -31,10 +31,7 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <% items = [] %>
-    <% items << Item.new("Channa Masala", 5.95, "Awesomeness") %>
-    <% items << Item.new("Chicken Tikka Masala", 6.95, "Yummy goodness") %>
-    <% items.each do |item| %>
+    <% Menu.new.items.each do |item| %>
     <dt><%= item.name %> - <%= item.price %></dt>
     <dd><%= item.description %></dd>
     <% end %>
