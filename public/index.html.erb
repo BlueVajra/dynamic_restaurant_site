@@ -31,11 +31,14 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <dt>Channa Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
-    
-    <dt>Chicken Tikka Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
+    <% item = Item.new("Channa Masala", 5.95, "Awesomeness") %>
+    <dt><%= item.name %> - <%= item.price %></dt>
+    <dd><%= item.description %></dd>
+
+    <% item = Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness") %>
+    <dt><%= item.name %> - <%= item.price %></dt>
+    <dd><%= item.description %></dd>
+
   </dl>
 </main>
 
