@@ -3,9 +3,23 @@ class Item
 
   def initialize(name, price, description, image="images/no_image.jpg")
     @name = name
-    @price = price
+    @price = price.to_f
     @description = description
     @image = image
+    @today =  Date.today.strftime("%A")
+  end
+
+  def price
+    if @today == "Wednesday"
+      @price = (@price * 0.9).round(2)
+    else
+      @price
+    end
+  end
+
+  def wed_date
+    # this overrides the tdate variable
+    @today = "Wednesday"
   end
 
   def == (other)
