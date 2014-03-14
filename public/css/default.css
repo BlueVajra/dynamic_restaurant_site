@@ -64,13 +64,19 @@ dd {
 }
 .main_image {width:20em;float:left}
 .main_image img {vertical-align: middle;width: 95%;}
+
 .menu {padding-top:2em; clear:both}
 .media {margin:10px;float:left;width:48%}
+/*.media:nth-child(2n+1){margin-left:49%}*/
+.media:nth-child(2n){clear:left; margin-left:0px}
 .media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
 .media .img {float:left; margin-right: 10px;}
 .media .img img{display:block;width:10em}
-.media .imgExt{float:right; margin-left: 10px;}
 
-@media (max-width: 80em) {
-    .media {margin:10px;float:left;width:99%}
+.media h2{margin-top:0}
+.media h3{margin-top:10px}
+
+@media (max-width: 60em) {
+    /*.media {margin:10px;float:left;width:99%}*/
+    .media {margin:10px 0;float:none;width:98%}
 }
