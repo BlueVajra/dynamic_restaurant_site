@@ -11,6 +11,7 @@
 <header>The Foods of Southern India</header>
 
 <main>
+  <div class="main_image"><img src="/images/food1.jpg"></div>
   <p>
     But be all this as it may; let the unseen, ambiguous synod in the air, or the vindictive
     princes and potentates of fire, have to do or not with earthly Ahab, yet, in this present
@@ -28,15 +29,22 @@
     idleness in the hold; and, to accelerate the affair, the blacksmith was commanded to
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
-  <img src="/images/food1.jpg">
 
-  <dl>
+  <div class="menu">
+    <h2>Our Menu</h2>
     <% Menu.new.items.each do |item| %>
-    <dt><%= item.name %> - <%= item.price %></dt>
-    <dd><%= item.description %></dd>
+      <div class="media">
+        <div class="img"><img src="/images/<%= item.image %>" alt="<%= item.name %>"/></div>
+        <div class="bd">
+          <dl>
+            <dt><%= item.name %> - <%= item.price %></dt>
+            <dd><%= item.description %></dd>
+          </dl>
+        </div>
+      </div>
     <% end %>
+  </div>
 
-  </dl>
 </main>
 
 <footer>

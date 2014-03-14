@@ -20,6 +20,7 @@ footer {
     padding-bottom: 1em;
     margin-top: 1em;
     text-align: center;
+    clear:both;
 }
 
 address {
@@ -30,9 +31,9 @@ address {
 }
 
 img {
-    display: inline-block;
-    width: 49%;
-    vertical-align: middle;
+    /*display: inline-block;*/
+    /*width: 95%;*/
+
 }
 
 ul {
@@ -48,9 +49,9 @@ a {
 dl {
     font-size: 1.5em;
     display: inline-block;
-    width: 40%;
+    /*width: 40%;*/
     margin-left: 1em;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
 }
 
 dt {
@@ -60,4 +61,16 @@ dt {
 dd {
     margin: 0 0 2em 0;
     padding: 0;
+}
+.main_image {width:20em;float:left}
+.main_image img {vertical-align: middle;width: 95%;}
+.menu {padding-top:2em; clear:both}
+.media {margin:10px;float:left;width:48%}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;width:10em}
+.media .imgExt{float:right; margin-left: 10px;}
+
+@media (max-width: 80em) {
+    .media {margin:10px;float:left;width:99%}
 }
