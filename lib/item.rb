@@ -6,21 +6,11 @@ class Item
     @price = price.to_f
     @description = description
     @image = image
-    #@today =  Date.today
   end
 
   def price(today = Date.today)
-    if today.wednesday?
-      @price = (@price * 0.9).round(2)
-    else
-      @price
-    end
+    today.wednesday? ? @price = (@price * 0.9).round(2) : @price
   end
-  #
-  #def wed_date
-  #  # this overrides the tdate variable
-  #  @today = "Wednesday"
-  #end
 
   def == (other)
     self.name == other.name
@@ -28,5 +18,4 @@ class Item
     self.description == other.description
     self.image == other.image
   end
-
 end

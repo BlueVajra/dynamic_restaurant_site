@@ -2,13 +2,15 @@ require 'csv'
 require 'item'
 
 class Menu
-  def initialize
+  def initialize(day_of_week = Date.today.strftime("%a"))
     @items = []
-    CSV.foreach(File.absolute_path("config/menu.csv"), { :headers => true }) do |row|
-      #@items << row // if we use this simple way, we would have to change the erb to grab hashes rather than methods
-      @items << Item.new(row["name"], row["price"], row["description"], row["image"])
+    CSV.foreach(File.absolute_path("config/menu.csv"), {:headers => true}) do |row|
+      if row["days"].include?(day_of_week) || row["days"].include?("All")
+        @items << Item.new(row["name"], row["price"], row["description"], row["image"])
+      end
     end
   end
+
   def items
     @items
   end

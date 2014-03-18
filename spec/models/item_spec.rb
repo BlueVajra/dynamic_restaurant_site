@@ -16,8 +16,6 @@ describe Item do
   end
   it "gives 10% discount on wednessdays" do
     item = Item.new("Channa Masala", 5.95, "Awesomeness")
-    #item.wed_date
-    # the above line forces the item class to think it's wed""
     expect(item.price(Date.new(2014, 3, 19))).to eq 5.36
   end
 
