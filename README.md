@@ -28,5 +28,6 @@ You can find them in the `spec/features` directory.
 NOTE: Whenever you change a ruby file, you need to stop the server, and restart it.
 
 ## Staging
+here we go
 
 URL: http://serene-fortress-6457.herokuapp.com/
